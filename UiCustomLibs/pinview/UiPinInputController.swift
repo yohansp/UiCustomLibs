@@ -16,10 +16,17 @@ class UiPinInputController: UIViewController {
     private var currentActiveIndex = -1
     var delegate: ((String) -> Void)?
     
+    private lazy var labelTitle: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 19, weight: .regular)
+        label.text = "Masukan PIN/Password"
+        return label
+    }()
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 13
+        stackView.spacing = 17
         return stackView
     }()
     
@@ -31,21 +38,39 @@ class UiPinInputController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(stackView)
-        stackView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(100)
+        
+        // can be a logo
+        let labelLogo = UILabel()
+        labelLogo.text = "LOGO"
+        labelLogo.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+        view.addSubview(labelLogo)
+        labelLogo.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.centerX.equalToSuperview()
         }
         
+        // label
+        view.addSubview(labelTitle)
+        labelTitle.snp.makeConstraints { make in
+            make.top.equalTo(labelLogo.snp.bottom).offset(15)
+            make.centerX.equalToSuperview()
+        }
+        
+        // start setup pin view
+        view.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.top.equalTo(labelTitle.snp.bottom).offset(25)
+            make.centerX.equalToSuperview()
+        }
         clearInputText()
         for _ in 0..<Property.maximumChar {
             let view = UIView()
             view.layer.borderWidth = 1
             view.layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
-            view.layer.cornerRadius = 15
+            view.layer.cornerRadius = 10
             stackView.addArrangedSubview(view)
             view.snp.makeConstraints { make in
-                make.size.equalTo(30)
+                make.size.equalTo(20)
             }
         }
         
