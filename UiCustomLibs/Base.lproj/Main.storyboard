@@ -24,13 +24,32 @@
                                     <action selector="onOpenDayPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZr-hJ-ylL"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-jX-Vi3" customClass="UiKeyboardView" customModule="UiCustomLibs" customModuleProvider="target">
+                                <rect key="frame" x="16" y="422" width="361" height="396"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-gH-EKr">
+                                <rect key="frame" x="16" y="124" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open Input Pin"/>
+                                <connections>
+                                    <action selector="onOpenInputPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7m-Pm-Myp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QRd-jX-Vi3" firstAttribute="leading" secondItem="lyu-lw-onS" secondAttribute="leading" id="4x0-wM-hOk"/>
+                            <constraint firstItem="QRd-jX-Vi3" firstAttribute="trailing" secondItem="lyu-lw-onS" secondAttribute="trailing" id="5ip-nJ-kZX"/>
+                            <constraint firstItem="QRd-jX-Vi3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="422" id="6FH-iL-OHp"/>
                             <constraint firstItem="lyu-lw-onS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="EOm-pP-A9f"/>
+                            <constraint firstItem="bRA-gH-EKr" firstAttribute="top" secondItem="lyu-lw-onS" secondAttribute="bottom" constant="8" id="OcT-UG-v0M"/>
                             <constraint firstItem="lyu-lw-onS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WxK-e0-SjB"/>
                             <constraint firstItem="lyu-lw-onS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dKH-nJ-GQh"/>
+                            <constraint firstItem="bRA-gH-EKr" firstAttribute="leading" secondItem="lyu-lw-onS" secondAttribute="leading" id="hUK-OJ-5xv"/>
+                            <constraint firstItem="bRA-gH-EKr" firstAttribute="trailing" secondItem="lyu-lw-onS" secondAttribute="trailing" id="sak-Ei-2kK"/>
+                            <constraint firstItem="QRd-jX-Vi3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wF7-ta-kRa"/>
                         </constraints>
                     </view>
                 </viewController>

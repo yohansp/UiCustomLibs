@@ -25,6 +25,7 @@ class UiDayPickerDialog: UIViewController {
         view.register(UiDayPickerCell.self, forCellWithReuseIdentifier: Property.dateCell)
         return view
     }()
+    
     lazy var labelSelectedDay: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)

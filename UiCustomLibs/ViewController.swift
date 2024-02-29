@@ -20,5 +20,11 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func onOpenInputPin(_ sender: Any) {
+        let vc = UiPinInputController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
+    }
 }
 

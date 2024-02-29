@@ -18,6 +18,9 @@
 		151ED09B2B8F1FFF00273F71 /* UiColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED09A2B8F1FFF00273F71 /* UiColor+Extension.swift */; };
 		151ED09D2B8F201300273F71 /* UiView+TapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED09C2B8F201300273F71 /* UiView+TapListener.swift */; };
 		151ED09F2B8F205500273F71 /* DayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED09E2B8F205500273F71 /* DayButton.swift */; };
+		151ED0A32B8FEA5500273F71 /* UiKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED0A22B8FEA5500273F71 /* UiKeyboardView.swift */; };
+		151ED0A62B8FEB4F00273F71 /* UiKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED0A52B8FEB4F00273F71 /* UiKeyboardCell.swift */; };
+		151ED0A82B904A3000273F71 /* UiPinInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED0A72B904A3000273F71 /* UiPinInputController.swift */; };
 		169E1996435F17EDECBF1AD3 /* Pods_UiCustomLibs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1268992E2765B77C9C9470D2 /* Pods_UiCustomLibs.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		151ED09A2B8F1FFF00273F71 /* UiColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiColor+Extension.swift"; sourceTree = "<group>"; };
 		151ED09C2B8F201300273F71 /* UiView+TapListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+TapListener.swift"; sourceTree = "<group>"; };
 		151ED09E2B8F205500273F71 /* DayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayButton.swift; sourceTree = "<group>"; };
+		151ED0A22B8FEA5500273F71 /* UiKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiKeyboardView.swift; sourceTree = "<group>"; };
+		151ED0A52B8FEB4F00273F71 /* UiKeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiKeyboardCell.swift; sourceTree = "<group>"; };
+		151ED0A72B904A3000273F71 /* UiPinInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiPinInputController.swift; sourceTree = "<group>"; };
 		ADC0C8B3FC23F43FE6D88131 /* Pods-UiCustomLibs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UiCustomLibs.debug.xcconfig"; path = "Target Support Files/Pods-UiCustomLibs/Pods-UiCustomLibs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				151ED0932B8F1F7800273F71 /* tools */,
+				151ED0A02B8FE8F400273F71 /* pinview */,
 				151ED0922B8F1F6F00273F71 /* daypicker */,
 				151ED07E2B8F1F0100273F71 /* AppDelegate.swift */,
 				151ED0802B8F1F0100273F71 /* SceneDelegate.swift */,
@@ -119,6 +126,32 @@
 				151ED09E2B8F205500273F71 /* DayButton.swift */,
 			);
 			path = component;
+			sourceTree = "<group>";
+		};
+		151ED0A02B8FE8F400273F71 /* pinview */ = {
+			isa = PBXGroup;
+			children = (
+				151ED0A42B8FEB3A00273F71 /* cell */,
+				151ED0A12B8FE92B00273F71 /* component */,
+				151ED0A72B904A3000273F71 /* UiPinInputController.swift */,
+			);
+			path = pinview;
+			sourceTree = "<group>";
+		};
+		151ED0A12B8FE92B00273F71 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				151ED0A22B8FEA5500273F71 /* UiKeyboardView.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		151ED0A42B8FEB3A00273F71 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				151ED0A52B8FEB4F00273F71 /* UiKeyboardCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		7C48EE74EBC25025C98269ED /* Frameworks */ = {
@@ -253,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151ED0A62B8FEB4F00273F71 /* UiKeyboardCell.swift in Sources */,
 				151ED0972B8F1FB200273F71 /* UiDayPickerDialog.swift in Sources */,
+				151ED0A32B8FEA5500273F71 /* UiKeyboardView.swift in Sources */,
 				151ED09D2B8F201300273F71 /* UiView+TapListener.swift in Sources */,
 				151ED0832B8F1F0100273F71 /* ViewController.swift in Sources */,
 				151ED07F2B8F1F0100273F71 /* AppDelegate.swift in Sources */,
@@ -261,6 +296,7 @@
 				151ED0812B8F1F0100273F71 /* SceneDelegate.swift in Sources */,
 				151ED0992B8F1FCA00273F71 /* UiDayPickerCell.swift in Sources */,
 				151ED09B2B8F1FFF00273F71 /* UiColor+Extension.swift in Sources */,
+				151ED0A82B904A3000273F71 /* UiPinInputController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
