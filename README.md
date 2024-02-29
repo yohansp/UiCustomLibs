@@ -5,5 +5,6 @@ example:</br>
 
 ## #2 Sample UI for Input PIN or Password
 example:</br>
-![image](https://github.com/yohansp/UiCustomLibs/assets/93885/fdcbdc00-7906-45c9-a680-6cdd22f624e3)
+![image](https://github.com/yohansp/UiCustomLibs/assets/93885/35b68dec-71fb-472c-8359-f47272028f08)
+
 
